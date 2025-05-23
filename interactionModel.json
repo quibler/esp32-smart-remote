@@ -1,0 +1,276 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "hello world",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PowerIntent",
+                    "slots": [
+                        {
+                            "name": "Power",
+                            "type": "PowerState"
+                        }
+                    ],
+                    "samples": [
+                        "{Power}",
+                        "turn {Power}",
+                        "to {Power}",
+                        "turn the ac {Power}",
+                        "to turn {Power}",
+                        "ac {Power}",
+                        "turn on the ac",
+                        "turn off the ac",
+                        "turn off",
+                        "turn on",
+                        "power {Power}",
+                        "power {Power} the ac"
+                    ]
+                },
+                {
+                    "name": "SetTemperatureIntent",
+                    "slots": [
+                        {
+                            "name": "Temperature",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "temperature {Temperature}",
+                        "to temperature {Temperature}",
+                        "set temperature to {Temperature}",
+                        "set to {Temperature}"
+                    ]
+                },
+                {
+                    "name": "SetModeIntent",
+                    "slots": [
+                        {
+                            "name": "Mode",
+                            "type": "ACMode"
+                        }
+                    ],
+                    "samples": [
+                        "{Mode}",
+                        "to {Mode}",
+                        "set mode to {Mode}",
+                        "mode {Mode}"
+                    ]
+                },
+                {
+                    "name": "SetFanIntent",
+                    "slots": [
+                        {
+                            "name": "FanSpeed",
+                            "type": "FanSpeed"
+                        }
+                    ],
+                    "samples": [
+                        "fan {FanSpeed}",
+                        "to fan {FanSpeed}",
+                        "set fan to {FanSpeed}",
+                        "fan speed {FanSpeed}"
+                    ]
+                },
+                {
+                    "name": "SetSwingIntent",
+                    "slots": [
+                        {
+                            "name": "SwingState",
+                            "type": "SwingState"
+                        }
+                    ],
+                    "samples": [
+                        "swing {SwingState}",
+                        "to swing {SwingState}",
+                        "set swing to {SwingState}",
+                        "turn swing {SwingState}"
+                    ]
+                },
+                {
+                    "name": "SleepIntent",
+                    "slots": [
+                        {
+                            "name": "SleepState",
+                            "type": "SleepState"
+                        }
+                    ],
+                    "samples": [
+                        "sleep {SleepState}",
+                        "to sleep {SleepState}",
+                        "set sleep to {SleepState}",
+                        "turn sleep {SleepState}",
+                        "sleep mode {SleepState}"
+                    ]
+                },
+                {
+                    "name": "SetTimerIntent",
+                    "slots": [
+                        {
+                            "name": "TimerHours",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "set timer to {TimerHours} hours",
+                        "timer {TimerHours} hours",
+                        "set timer for {TimerHours} hours",
+                        "turn timer off",
+                        "cancel timer",
+                        "disable timer"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ControlACIntent",
+                    "slots": [
+                        {
+                            "name": "Power",
+                            "type": "PowerState"
+                        },
+                        {
+                            "name": "FanSpeed",
+                            "type": "FanSpeed"
+                        },
+                        {
+                            "name": "Mode",
+                            "type": "ACMode"
+                        },
+                        {
+                            "name": "Temperature",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "SwingState",
+                            "type": "SwingState"
+                        },
+                        {
+                            "name": "TimerHours",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "turn {Power} the ac",
+                        "turn {Power} the ac with {FanSpeed} fan speed and {Mode} mode",
+                        "set ac to {Power} with {FanSpeed} fan and {Mode} mode at {Temperature} degrees",
+                        "{Power} ac {FanSpeed} fan {Mode} mode {Temperature} degrees swing {SwingState} timer {TimerHours} hours",
+                        "start ac {Power} with {Temperature} degrees",
+                        "ac {Power} with {FanSpeed} fan",
+                        "{Power}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "PowerState",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ACMode",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "cool"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "auto"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "fan"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "FanSpeed",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "auto"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "low"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "high"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SwingState",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "SleepState",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
